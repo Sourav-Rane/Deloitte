@@ -1,0 +1,7 @@
+s = input()
+c=0
+print(s[::-1])
+for i in s:
+	if i in ['a','e','i','o','u']:
+		c+=1
+print("number of vowels ",c)
