@@ -1,0 +1,7 @@
+package finanace;
+
+public class Salary {
+	public in calSal(int basic , int pf) {
+		return basic + pf;
+	}
+}

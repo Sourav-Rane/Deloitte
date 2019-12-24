@@ -1,0 +1,14 @@
+
+public class Welcome {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Welcome to eclipse!");
+		Bye b = new Bye();
+		b.sayThanks();
+		
+		Apple a = new Apple();
+		a.sayApple();
+	}
+
+}
