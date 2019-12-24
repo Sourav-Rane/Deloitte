@@ -1,0 +1,18 @@
+package inheritance;
+
+public class Animal {
+	
+	public Animal() {
+		System.out.println("Animal constr");
+	}
+	
+	public Animal(String aniName) {
+		System.out.println("Animal cons called "+aniName);
+	}
+
+}
+
+
+class Car {
+
+}

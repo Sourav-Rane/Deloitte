@@ -1,0 +1,20 @@
+package oops;
+
+public class Demo {
+
+	int num1 =100;
+	int num2 =200;
+	
+	public Demo() {
+		num1++;
+		num2 = --num1;
+	}
+	
+	public Demo(int num2 , Demo demo) {
+		num2 = this.num1++;
+		this.num1 = demo.num2++;
+		this.num2 = --num2;
+		demo.num1 = ++num2;
+	}
+}
+ 

@@ -1,0 +1,16 @@
+package oops;
+
+public class StaticDemo {
+
+	int num1 = 10;
+	static int num2 = 20;
+
+	void change() {
+		num2++;
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -11,7 +11,7 @@ public class Employee {
 		empName = empName2;
 		empAddress =empAddress2;
 		salary = salary2;				
-	}
+	}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
 	
 	public void printEmployeeDetails() {
 		System.out.println("Employee ID : "+empId);
@@ -20,3 +20,4 @@ public class Employee {
 		System.out.println("Employee salary : "+salary);	
 	}
 }
+ 

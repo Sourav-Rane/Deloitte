@@ -1,0 +1,13 @@
+package inheritance;
+
+public class Vehicle {
+	
+	int price;
+	public void  start() {
+		
+	}
+	
+	public static void main(String[] args) {
+		
+	}
+}

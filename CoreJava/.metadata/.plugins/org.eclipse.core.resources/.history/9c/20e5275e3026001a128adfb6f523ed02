@@ -1,0 +1,15 @@
+package Exercises;
+
+public class Calculator {
+
+	
+	
+	public void add() {
+		
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

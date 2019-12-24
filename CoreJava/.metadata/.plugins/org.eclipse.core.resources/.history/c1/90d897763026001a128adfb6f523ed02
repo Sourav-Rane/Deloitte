@@ -1,0 +1,27 @@
+package Exercises;
+
+public class Calculator {
+
+	
+	
+	public void add(int x, int y) {
+		
+	}
+	
+	public void add(double x, double y) {
+			
+		}
+	
+	public void add(int x, double y) {
+		
+	}
+	
+	public void add(double x, int y) {
+		
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,16 @@
+package oops;
+
+public class AddVarArgs {
+
+	static void go(int x , int y) {
+		System.out.println("int , int ");
+	}
+	
+	static void go(byte...b) {
+		for(byte a: b)
+			System.out.println(a);
+	}
+		public static void main(String[] args) {
+			
+		}
+}

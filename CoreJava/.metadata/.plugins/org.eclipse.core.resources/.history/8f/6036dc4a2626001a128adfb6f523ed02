@@ -1,0 +1,26 @@
+package oops;
+
+public class Arrays_Demo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+//		for(String s: args)
+//			System.out.println(s);
+
+			String s = "The quick brown fox jumps over the lazy dog";
+			
+			System.out.println(s.charAt(12));
+		    String a[] = s.split(" ");
+		    
+		    for(String s1: a)
+		    	if(s1.equals("is")) {
+		    		System.out.println("word 'IS' exists");
+		    		break;
+		    	}
+		    
+		    System.out.println(s.concat("and killed it"));
+		    
+		    
+	}
+    
+}
