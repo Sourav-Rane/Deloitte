@@ -23,4 +23,9 @@ select * from customer where billamount < 5000;
 select * from customer where customeraddr ="pune" and billamount <5000;
 
 select * from customer where customeraddr = 'pune' or customeraddr = 'Mumb';
-select * from customer where customeraddr in ('pune' , 'Blr')
+select * from customer where customeraddr in ('pune' , 'Blr');
+
+
+
+insert into customer values(106,'jay',null,3000);
+insert into customer (customerid) values(107);
