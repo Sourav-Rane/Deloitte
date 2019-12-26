@@ -29,3 +29,71 @@ select * from customer where customeraddr in ('pune' , 'Blr');
 
 insert into customer values(106,'jay',null,3000);
 insert into customer (customerid) values(107);
+
+
+CREATE TABLE employee
+(
+employeeid integer not null,
+employeename varchar2(20) not null,
+employeeaddr varchar2(20),
+salary integer not null
+)
+
+
+select * from customer where customername like 'j%'
+select * from customer order by customername desc
+
+
+
+create table Student_f
+ (
+    Roll varchar(10),
+    Name varchar(20),
+    Address varchar(20),
+    Marks integer
+)
+ 
+insert into Student_F values('1','Tufail','Chennai',null);
+insert into Student_F values('2','Amit','Chennai',null);
+
+
+
+select upper('abc') from dual; // dual table is a dummy table
+
+
+Functions:
+1. number
+2. date
+3. conversion
+4. general functions
+5. character 
+
+
+Character
+
+select initcap(name) from student_f; 
+select initcap('sandeep') from dual;
+
+concat('hello','world')
+substr('helloworld',1,5)
+length('hello')
+instr('helloworld','w')
+LPAD(salary , 4 ,'*')
+RPAD(salary , 4 ,'*')
+TRIM('H' from 'Helloworld')
+
+
+months_between(date1 , date2  );
+add_months(date , number of months);
+
+
+select eid, ename , trunc((sysdate-dob)/365) as age , trunc((sysdate-doj)/365) as cmp_time from employee1
+
+select to_char(sysdate , 'dd/mm/yyyy') from dual
+
+select to_char(marks) || 5 from student_F;
+
+
+insert into employee1 values (5,'aditi',to_date('2003/05/03 21:02:44' , 'yyyy/mm/dd hh24:mi:ss'), to_date('2015/05/03 21:02:44' , 'yyyy/mm/dd hh24:mi:ss'))
+
+
