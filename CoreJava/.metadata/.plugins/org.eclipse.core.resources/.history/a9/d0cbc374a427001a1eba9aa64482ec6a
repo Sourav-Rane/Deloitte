@@ -1,0 +1,10 @@
+package NestingClasses;
+
+
+
+interface ChangePass {
+	void doChange();
+}
+public class DemoInnerClass {
+
+}

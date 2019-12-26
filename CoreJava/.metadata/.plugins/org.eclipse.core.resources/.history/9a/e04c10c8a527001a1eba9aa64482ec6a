@@ -1,0 +1,32 @@
+package NestingClasses;
+
+
+
+interface ChangePass {
+	void doChange();
+}
+
+
+class ChangePasswordImpl implements ChangePass{
+	@Override
+	public void doChange() {
+		System.out.println("password changed");
+	}
+}
+
+
+class ABC implements ChangePass{
+
+	@Override
+	public void doChange() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}
+public class DemoInnerClass implements ChangePass {
+	public static void main(String[] args) {
+		ChangePass p = new ChangePasswordImpl();
+		p.doChange();
+	}
+}

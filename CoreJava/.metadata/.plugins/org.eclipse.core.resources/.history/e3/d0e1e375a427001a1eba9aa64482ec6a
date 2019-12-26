@@ -1,0 +1,11 @@
+package NestingClasses;
+
+
+
+interface ChangePass {
+	void doChange();
+}
+
+public class DemoInnerClass {
+	public static void main(String[] args)
+}

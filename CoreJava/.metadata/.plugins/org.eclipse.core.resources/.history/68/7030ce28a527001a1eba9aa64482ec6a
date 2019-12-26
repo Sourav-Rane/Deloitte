@@ -1,0 +1,11 @@
+package NestingClasses;
+
+
+interface ChangePass1 {
+	void doChange();
+}
+
+
+public class Anonymous_Class {
+
+}

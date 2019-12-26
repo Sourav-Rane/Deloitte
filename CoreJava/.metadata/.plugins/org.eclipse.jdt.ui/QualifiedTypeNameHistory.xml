@@ -5,4 +5,9 @@
 <fullyQualifiedTypeName name="oops.BlockDemo"/>
 <fullyQualifiedTypeName name="java.util.StringTokenizer"/>
 <fullyQualifiedTypeName name="inheritance.SubOrder"/>
+<fullyQualifiedTypeName name="NestingClasses.ChangePassword"/>
+<fullyQualifiedTypeName name="NestingClasses.ChangePassword.EncrpytPassword"/>
+<fullyQualifiedTypeName name="NestingClasses.ChangePasswordImpl"/>
+<fullyQualifiedTypeName name="NestingClasses.ChangePass1"/>
+<fullyQualifiedTypeName name="NestingClasses.ChangePass"/>
 </qualifiedTypeNameHistroy>

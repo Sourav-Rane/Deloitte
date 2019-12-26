@@ -1,0 +1,17 @@
+package NestingClasses;
+
+
+
+interface ChangePass {
+	void doChange();
+}
+
+
+class ChangePasswordImpl implements ChangePass{
+	
+}
+public class DemoInnerClass {
+	public static void main(String[] args) {
+		
+	}
+}
