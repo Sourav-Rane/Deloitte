@@ -96,4 +96,8 @@ select to_char(marks) || 5 from student_F;
 
 insert into employee1 values (5,'aditi',to_date('2003/05/03 21:02:44' , 'yyyy/mm/dd hh24:mi:ss'), to_date('2015/05/03 21:02:44' , 'yyyy/mm/dd hh24:mi:ss'))
 
+select name , nvl(marks , 0 ) from student_f;  // replaces all null values 
+select nvl2(marks,roll*3 , roll*5) from student_f // if marks is not null then returns exp1 if null then returns 2nd expr
+select nullif(customerid , billamount) from customer; // if both equal then null else returns first expr
 
+select roll , coalesce(to_number(roll) , marks , 10) from student_F; 
