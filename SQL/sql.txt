@@ -1,0 +1,15 @@
+
+CREATE TABLE CUSTOMER
+(
+CUSTOMERID INTEGER,
+CUSTOMERNAME VARCHAR2(20),
+CUSTOMERADDR VARCHAR2(20),
+BILLAMOUNT INTEGER
+)
+
+
+insert into customer values(101,'jay','pune',34324);
+insert into customer values(102,'yash','Blr',34324);
+insert into customer values(103,'tarun','Blr',34324);
+insert into customer values(104,'kalpana','Mumb',34324);
+insert into customer values(105,'shek','pune',34324);
