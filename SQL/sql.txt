@@ -13,3 +13,8 @@ insert into customer values(102,'yash','Blr',34324);
 insert into customer values(103,'tarun','Blr',34324);
 insert into customer values(104,'kalpana','Mumb',34324);
 insert into customer values(105,'shek','pune',34324);
+
+
+select distinct(customeraddr) from customer
+select  customername , billamount , billamount*10 as newbill from customer
+select 'Mr/Ms' || customername from customer
