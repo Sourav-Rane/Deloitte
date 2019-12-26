@@ -101,3 +101,39 @@ select nvl2(marks,roll*3 , roll*5) from student_f // if marks is not null then r
 select nullif(customerid , billamount) from customer; // if both equal then null else returns first expr
 
 select roll , coalesce(to_number(roll) , marks , 10) from student_F; 
+
+
+
+
+create table customer100 
+(
+   cid integer primary key,
+cname varchar(20) not null,
+caddr varchar(20) check(caddr in('delhi','mumbai','kolkata')),
+billAmount integer check(billamount > 20)
+)
+
+insert into customer100 values(100,'sandeep','mumbai',100)
+
+
+
+create table customer200 
+(
+   cid integer constraint pkcid primary key,
+cname varchar(20) constraint cnamenotnull not null,
+caddr varchar(20) constraint checkaddress check(caddr in('delhi','mumbai','kolkata')),
+billAmount integer constraint checkbillamt check(billamount > 20)
+)
+
+create table customer300 
+(
+cid integer,
+cname varchar(20) constraint cnamenotnull1 not null,
+caddrr varchar(20) constraint checkaddrrn1 check(caddrr in ('delhi' , 'mumbai')),
+billamount integer constraint checkbill1 check (billamount > 0),
+email varchar(20),
+constraint pkcust primary key(cid , email)
+)
+
+
+
