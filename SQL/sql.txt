@@ -135,5 +135,15 @@ email varchar(20),
 constraint pkcust primary key(cid , email)
 )
 
+UPDATE
+update customer set customeraddr = 'bangalore' , billamount  = 5000 where customerid = '101'
 
+DELETE
+delete from customer where customername = 'jay';
+
+TRUNCATE
+truncate table customer;
+
+DROP
+drop table customer;
 
