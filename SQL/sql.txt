@@ -334,13 +334,12 @@ where a.sal < (select  avg(sal) from emp100  c group by deptno having c.deptno =
 ------------------------------------------------------------------------------------------
 
 
-
-create table employee 
+create table salary
 (
-employeeid integer primary key,
-employeename varchar(20) not null,
-employeeaddr varchar(20) not in ('Newyork','London',
-dob date,
-doj date,
-salary integer
+employeeid integer,
+employeepf integer check(employeepf >0),
+employeehra integer check(employeehra >0)
 )
+
+
+alter table salary add constraint fkempdept1 foreign key(employeeid) references employee(employeeid);

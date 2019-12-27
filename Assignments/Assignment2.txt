@@ -1,0 +1,56 @@
+Create a table called Employee with the following Columns  and following Constrains :-
+------------------------------------------------------------------------------------------------------------
+
+Assignment 1:
+
+EmployeeID should not be duplicate
+EmployeeName should not be null
+EmployeeAddress  :- should not be Newyork, London and Paris
+Salary : should be between 20000 and 30000
+CompanyAddress should be default as ASV Suntech Park
+
+
+
+	create table employee 
+	(
+	employeeid integer primary key,
+	employeename varchar(20) not null,
+	employeeaddr varchar(20) check( employeeaddr not in ('Newyork','London', 'Paris')),
+	salary integer check (salary between 20000 and 30000),
+	companyaddress varchar(20) default 'ASV Suntech Park'
+	);
+
+------insert two records
+
+
+
+
+Salary Table
+
+EmployeeID  :- should not be duplicate
+Employee PF  :- should not be negative
+Employee HRA :- should not be negative
+
+	create table salary
+	(
+	employeeid integer,
+	employeepf integer check(employeepf >0),
+	employeehra integer check(employeehra >0)
+	)
+
+
+
+The Salary Table must match EmployeeID.
+
+
+Assignment 2:
+
+Create a table with two columns and enforce the integrity.
+*Think what will be the required integrity to be enforced on CID , CitizenDOB and CitizenDOD
+
+Table :- Citizen
+
+Columns
+	CID
+	CitizenDOB
+	CitizenDOD ( Date of Death )
