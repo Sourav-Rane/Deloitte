@@ -1,0 +1,77 @@
+Create a table called Employee with the following Columns  and perform the following operations:-
+------------------------------------------------------------------------------------------------------------
+
+EmployeeID
+EmployeeName
+EmployeeAddress
+DOB
+DOJ
+Salary
+
+
+
+a.) Insert five records
+
+	insert into employee values (101,'sourav','blr','1/1/2000','2/2/2017',12345);
+	insert into employee values (102,'abhishek','pune','1/1/2004','2/2/2012',34234);
+	insert into employee values (103,'swathi','tn','1/1/2007','2/2/2012',939393);
+	insert into employee values (104,'ashwath','kerala','1/1/2008','2/2/2020',343242);
+	insert into employee values (105,'subarna','orissa','1/1/2003','2/2/2011',3423);
+
+
+
+
+b) Retrieve all the records
+	
+	select * from employee;
+
+
+c) Retrieve the Employee name whose salary is greater than 20000
+
+	select * from employee where salary > 20000
+
+	
+
+d) Retrieve the Employee name whose address contains 'a' or 'p' or 'r'  as the last character
+
+	select * from employee where employeeaddr like ('%a') or employeeaddr like ('%P') or employeeaddr like('%i')
+
+
+
+e) Increase the Salary of all the Employee by 20%
+	
+	update employee
+	set salary = salary*1.2 
+
+
+f) Delete all the employee records whose salary is less than 5000
+
+	delete from employee where salary < 5000
+
+
+g) Add another column Email and update the contents.
+	
+	alter table employee add email varchar(20) ;
+	update employee set email = employeename||'@gmail.com'
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
