@@ -335,3 +335,12 @@ where a.sal < (select  avg(sal) from emp100  c group by deptno having c.deptno =
 
 
 
+create table employee 
+(
+employeeid integer primary key,
+employeename varchar(20) not null,
+employeeaddr varchar(20) not in ('Newyork','London',
+dob date,
+doj date,
+salary integer
+)
