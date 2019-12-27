@@ -224,4 +224,30 @@ select * from book
 
 delete from section where section_id = 1
 
-   
+
+----------------------------------------------------------------------------
+Disabling constraints
+
+ALTER TABLE table_name
+DISABLE CONSTRAINT constraint_name;
+
+
+--------------------------------------------------------------------------------
+JOINS
+
+
+EQUI-join , INNER , SIMPLE
+
+select supplier_name , order_date
+from suppliers , orders
+where suppliers.supplier_id = orders.supplier_id
+
+
+select s.supplier_id ,s.supplier_name , o.order_date
+from suppliers s , orders o
+where s.supplier_id = o.supplier_id
+
+
+--------------------------------------------------------------------------------
+
+OUTER join	
