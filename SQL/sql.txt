@@ -67,6 +67,7 @@ Functions:
 3. conversion
 4. general functions
 5. character 
+-------------------------------------------------------------------------------------
 
 
 Character
@@ -83,8 +84,14 @@ RPAD(salary , 4 ,'*')
 TRIM('H' from 'Helloworld')
 
 
+-------------------------------------------------------------------------------------
+
+
+
 months_between(date1 , date2  );
 add_months(date , number of months);
+
+-------------------------------------------------------------------------------------
 
 
 select eid, ename , trunc((sysdate-dob)/365) as age , trunc((sysdate-doj)/365) as cmp_time from employee1
@@ -115,6 +122,8 @@ billAmount integer check(billamount > 20)
 
 insert into customer100 values(100,'sandeep','mumbai',100)
 
+
+-------------------------------------------------------------------------------------
 
 
 create table customer200 
@@ -147,3 +156,72 @@ truncate table customer;
 DROP
 drop table customer;
 
+
+-------------------------------------------------------------------------------------
+
+
+FK
+
+create table emp 
+(
+emp_no integer primary key,
+empname varchar(20) not null,
+salary integer,
+designation varchar(20),
+dept_no integer
+)
+
+create table dept
+(
+dept_no integer primary key,
+dept_name varchar(20),
+location varchar(20) not null
+)
+
+
+alter table emp add constraint fkempdept foreign key(dept_no) references dept(dept_no);
+
+insert into dept values(100,'HR','mumbai')
+insert into emp values(12,'yati',8878,'developer',100)
+
+-------------------------------------------------------------------------------------
+
+CASCADE
+
+create table section
+(
+section_id integer constraint s_id check (section_id > 0),
+section_name char(30) constraint s_name not null,
+book_count integer,
+constraint sect_prime primary key(section_id)
+)
+
+
+
+CREATE TABLE BOOK
+(
+ISBN INTEGER CONSTRAINT B_ISBN CHECK (ISBN BETWEEN 1 AND 2000),
+TITLE VARCHAR2(200) CONSTRAINT B_TITLE NOT NULL,
+AUTHOR VARCHAR2(50) CONSTRAINT B_AUTH NOT NULL,
+LENT_DATE DATE,
+RETURNED_DATE DATE,
+TIMES_LENT NUMBER(6),
+SECTION_ID NUMBER(3),
+CONSTRAINT BOOK_PRIME PRIMARY KEY (ISBN),
+CONSTRAINT BOOK_SECT FOREIGN KEY (SECTION_ID) REFERENCES SECTION(SECTION_ID)
+ON DELETE CASCADE)
+
+
+
+
+INSERT INTO SECTION values(1,'ABC',78);
+
+INSERT INTO SECTION values(2,'XYZ',65);
+insert into BOOK values(1,'java','james',to_date('3/3/09','mm/dd/yy'),to_date('3/4/09','mm/dd/yy'),10,1);
+
+select * from section
+select * from book
+
+delete from section where section_id = 1
+
+   
