@@ -250,4 +250,40 @@ where s.supplier_id = o.supplier_id
 
 --------------------------------------------------------------------------------
 
-OUTER join	
+OUTER join
+
+L-outer Join
+
+select s.supplier_id ,s.supplier_name , o.order_date
+from suppliers s , orders o
+where s.supplier_id = o.supplier_id(+)	
+
+R-outer join
+
+select s.supplier_id ,s.supplier_name , o.order_date
+from suppliers s , orders o
+where s.supplier_id(+) = o.supplier_id
+
+Full - outer join
+
+select s.supplier_id ,s.supplier_name , o.order_date
+from suppliers s full outer join orders o 
+on s.supplier_id = o.supplier_id
+
+
+
+---------------------------------------------------------------------------------------
+
+SELF join
+
+select e1.last_name || 'works for' || e2.last_name
+"Employees and their Managers"
+from employees e1, employees e2 
+where e1.manager_id = e2.employee_id;
+
+---------------------------------------------------------------------------------------
+
+
+GROUP BY
+select manager_id , sum(salary) from employees group by manager_id;
+
