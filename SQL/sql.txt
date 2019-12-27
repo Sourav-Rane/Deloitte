@@ -287,3 +287,51 @@ where e1.manager_id = e2.employee_id;
 GROUP BY
 select manager_id , sum(salary) from employees group by manager_id;
 
+
+----------------------------------------------------------------------------------
+
+SUB QUERY
+select name from stu where roll in (select roll from fees where amount = 10800)
+
+
+----------------------------------------------------------------------------------------
+EXISTS
+
+select name from stu where not exists (select roll from fees where amount = 100)
+select name from stu where exists (select roll from fees)
+
+------------------------------------------------------------------------------------------
+
+ANY
+
+select roll, name from stu where roll > any( select roll from fees)
+select roll, name from stu where roll > all( select roll from fees)
+
+---------------------------------------------------------------------------------------------
+COORELATED sub UPDATE
+
+create table emp100
+(
+	empId integer,
+	empName varchar(20),
+	sal integer,
+	deptno integer
+)
+
+
+insert into emp100 values(1,'Tufail',980000,1);
+insert into emp100 values(2,'Ahmed',80000,1);
+insert into emp100 values(3,'Khan',90000,2);
+insert into emp100 values(4,'Tarun',20000,2);
+insert into emp100 values(5,'Neha',950000,2);
+
+
+update emp100 a
+set a.sal = ( select avg(sal) from emp100 b group by deptno having a.deptno = b.deptno)
+where a.sal < (select  avg(sal) from emp100  c group by deptno having c.deptno = a.deptno)
+
+
+------------------------------------------------------------------------------------------
+
+
+
