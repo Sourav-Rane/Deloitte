@@ -330,7 +330,7 @@ update emp100 a
 set a.sal = ( select avg(sal) from emp100 b group by deptno having a.deptno = b.deptno)
 where a.sal < (select  avg(sal) from emp100  c group by deptno having c.deptno = a.deptno)
 
-
+http://myctsbag.blogspot.com/2016/04/sql-questionsbank-management-system-2.html#
 ------------------------------------------------------------------------------------------
 
 
