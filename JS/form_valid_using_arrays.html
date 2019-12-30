@@ -8,14 +8,18 @@ This example uses text fields , radio button and checkbox.
 			if ((name.value == "") || (address.value == "")) {
 				alert("Please ensure that all fields are filled up");
 				return false;
-			}
+            }
+            
 			s = like[0].checked ? like[0].value : like[1].value;
 			s += gender[0].checked ? gender[0].value : gender[1].value;
 			s = "Thankyou," + name.value + ". You " + s + " our site.\n";
-			s = s + "Your suggesstion (";
+            s = s + "Your suggesstion (";
+            
 			for (i = 0; i < better.length; i++)
 				if (better[i].checked)
-					s = s + better[i].value + ";"
+                    s = s + better[i].value + ";"
+                    
+                    
 			s = s + " ) are recorded";
 		}
 		alert(s);
