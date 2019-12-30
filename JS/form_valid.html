@@ -30,7 +30,7 @@
             
 			<tr>
 				<td>BILL AMOUNT:</td>
-                <td><input type="text" name="bill" id="bill"></td>
+                <td><input type="number" name="bill" id="bill"></td>
                 <td id="billerr"></td>
             </tr>
             
@@ -41,7 +41,7 @@
 		</table>
 	</form>
 
-
+    <h3 id= "print" style="color: green; text-align: center;"></h3>
 
     <script>
 
@@ -49,44 +49,65 @@
     document.querySelector('#check').addEventListener('click' , function(){
 
         var cid , name , addr , bill;
+        var ct  , cn  , ca , cb;
 
         cid = document.getElementById('cid').value;
         if(cid.length < 6)
         {
             document.getElementById('ciderr').innerHTML = "<font color = red> ID should be >= 6 digits </font>";
+            ct = false
         }
-        else
+        else{
         document.getElementById('ciderr').innerHTML = "";
+        ct = true
+        }
       
         name = document.getElementById('username').value;
         if(name.length == 0)
         {
             document.getElementById('nameerr').innerHTML = "<font color = red> Enter your name </font>";  
+            cn = false
         }
-        else
-        document.getElementById('nameerr').innerHTML = "";
-
+        else{
+            document.getElementById('nameerr').innerHTML = "";
+            cn = true;
+         }
 
         addr = document.getElementById('caddr').value;
 
         if(addr == 'Pune' || addr == 'Mumbai')
-        { document.getElementById('addrerr').innerHTML = "";}
+        { document.getElementById('addrerr').innerHTML = "";
+         ca = true;
+        }
         else
         {
             document.getElementById('addrerr').innerHTML = "<font color = red> Only Pune and Mumbai is allowed </font>";  
+            ca = false;
         }
 
         bill = document.getElementById('bill').value;
         if(parseInt(bill) < 0)
         {
             document.getElementById('billerr').innerHTML = "<font color = red> Bill cannot be -ve </font>";  
+            cb = false;
         }
-        else
+        else{
         document.getElementById('billerr').innerHTML = "";
+        cb = true;
+        }
 
+       
+        if(ca && cb && cn && ct)
+    {
+        document.getElementById('print').innerHTML += "Customer ID : "+cid+"<br>";
+        document.getElementById('print').innerHTML += "Customer Name : "+name+"<br>";
+        document.getElementById('print').innerHTML += "Customer Addr : "+addr+"<br>";
+        document.getElementById('print').innerHTML += "Customer Bill : "+bill+"<br>";
+    }
 
     });
     
+  
     </script>
 </body>
 </html>
