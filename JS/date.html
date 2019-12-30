@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+
+ <script>
+     var today = new Date();
+     var lastDate = new Date();
+     lastDate.setFullYear(2020,0,1);
+
+     if(lastDate > today){
+         var days = 1000*60*60*24;
+         var x  = (lastDate - today)/days;
+         alert("Number of days left "+x);
+     }else
+     alert("Time up ");
+ 
+ </script>   
+</body>
+</html>

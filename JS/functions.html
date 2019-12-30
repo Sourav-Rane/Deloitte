@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value = "demo" onclick="demo()">
+    <input type="button" value = "Greetings" onclick="greet()">
+
+    <script>
+
+        total = 0;
+        function num(){
+            y = 0;
+            var x = 10;
+            total = x+y;
+            console.log(total);
+        }
+
+
+        function display(){
+            console.log(total);
+            console.log(y);
+            console.log(x);
+        }
+
+
+        num();
+        display();
+
+        function demo(){
+            var res = confirm("Do you want to continue ? !");
+            alert(res==true?"OK":"Not ok")
+        }
+
+        function greet(s)
+        {
+            if(s == null) 
+                s = "Good night";
+            alert(s);
+        }
+    </script>
+</body>
+</html>
