@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Login form</title>
+</head>
+<body>
+
+
+<div id="div1"></div>
+<button id="btn">Change</button>
+
+
+
+<form action= "index.html" onsubmit="return checkUser()">
+<h2>Login form</h2> 
+<table cellspacing="10" cellpadding="10" border="0" align="center">
+<caption>Login Form</caption>
+<tr>
+<td>User Name:<input type="text" name="username" id="username"  /></td>
+</tr>
+<tr>
+<td>pass:<input type="password" name="password" id="password" /></td>
+</tr>
+<tr>
+    <td>renter pass:<input type="password" name="cnfpassword" id="cnfpassword"  /></td>
+    </tr>
+    
+
+<td><input type="submit" value="login"  id="val"/></td>
+<td><input type="submit"  value="logout" formaction="neha.html" /></td>
+</tr>
+</table>
+</form>
+
+<script>
+    function checkUser(){
+        var uname = document.getElementById('uname');
+        alert(document.forms[0].elements[0].value);
+        alert(document.forms[0].elements['password'].value)
+        
+    }
+
+</script>
+
+</body>
+</html>
