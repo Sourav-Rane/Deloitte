@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        table,
+        td,
+        tr {
+            border: 1px solid black;
+        }
+
+        table {
+            position: fixed;
+            top: 100px;
+            left: 515px;
+            background-color: aqua;
+        }
+    </style>
+
+    <script>
+        function uname(){
+            with(document.forms[0]){
+                document.getElementById('Sname').textContent = username.value;
+            }
+        }
+
+        function partner(){
+            with(document.forms[0]){
+                document.getElementById('Sspouse').textContent = spouse.value;
+            }
+        }
+
+        function male_female(){
+            with(document.forms[0]){
+                document.getElementById('Sgender').textContent = gender.value;
+            }
+        }
+
+        function comments(){
+            with(document.forms[0]){
+                document.getElementById('Scomment').textContent = "People "+comment.value+"You!";
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <form action="">
+        <table>
+            <tr>
+                <td>Username</td>
+                <td><input type="text" name = "username" onblur = "uname()"></td>
+            </tr>
+
+            <tr>
+                <td>Spouse Name</td>
+                <td><input type="text" name = "spouse" onblur = "partner()"></td>
+            </tr>
+
+            <tr>
+                <td>Gender</td>
+                <td>
+                    <input type="radio" name="gender" value="Male" onchange="male_female()">Male
+                    <br>
+                    <input type="radio" name="gender" value="Female" onchange="male_female()" >Female
+                </td>
+            </tr>
+
+            <tr>
+                <td>Comments</td>
+                <td>
+                    <input type="radio" name="comment" value="Like" onchange="comments()">Like
+                    <br>
+                    <input type="radio" name="comment"  value="Dislike" onchange="comments()">Dislike
+                </td>
+            </tr>
+
+
+            <tr>
+                <td colspan="2" style="text-align: center;"><input type="submit"></td>
+            </tr>
+
+            <tr>
+                <td>Name</td>
+                <td id="Sname"></td>
+            </tr>
+
+            <tr>
+                <td>Spouse</td>
+                <td id="Sspouse"></td>
+            </tr>
+
+            <tr>
+                <td>Your Gender is</td>
+                <td id="Sgender"></td>
+            </tr>
+
+            <tr>
+                <td>Comment</td>
+                <td id="Scomment"></td>
+            </tr>
+        </table>
+
+    </form>
+</body>
+
+</html>
