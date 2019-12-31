@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="finanace.Salary"/>
-<fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="oops.BlockDemo"/>
 <fullyQualifiedTypeName name="java.util.StringTokenizer"/>
 <fullyQualifiedTypeName name="inheritance.SubOrder"/>
@@ -10,4 +9,7 @@
 <fullyQualifiedTypeName name="NestingClasses.ChangePasswordImpl"/>
 <fullyQualifiedTypeName name="NestingClasses.ChangePass1"/>
 <fullyQualifiedTypeName name="NestingClasses.ChangePass"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="java.util.InputMismatchException"/>
+<fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
 </qualifiedTypeNameHistroy>
