@@ -9,11 +9,12 @@ class demo2{
 	 int result;
 	 Scanner sc = new Scanner(System.in);
 	 
-	 public void display() {
+	 public void display() throws InterruptedException {
 		 try {
 			 num1 = sc.nextInt();
 			 num2 = sc.nextInt();
 			 System.out.println(num1/num2);
+			 Thread.sleep(100);
 			 
 		} catch (InputMismatchException e) {
 			System.out.println("enter number maen ");
@@ -32,7 +33,7 @@ public class Excep {
 	
 	public static void main(String[] args) {
 		demo2 d = new demo2();
-		d.display();
+//		d.display();
 		
 
 	}
