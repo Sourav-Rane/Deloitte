@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+    <p>Try to copy me </p>
+    <script>
+        $(document).ready(function () {
+            //Disable cut copy paste
+            $('body').bind('cut copy paste', function (e) {
+                alert("Very smart, you can cut copy paste")
+                e.preventDefault();
+            });
+
+            //Disable mouse right click
+            $("body").on("contextmenu", function (e) {
+                alert("Very smart, You can't right click")
+                return false; // if this isnt there then it wont display right click after alert
+            });
+
+
+            // $("p").click(function (e) {
+            //     alert("Very smart, You can't click")
+            //     e.preventDefault();
+            // });
+
+            // $('p').mousedown(function(event) {
+            //     event.preventDefault();
+            // });
+
+                //Disables selection
+            $('body').css("user-select","none");
+
+        });
+    </script>
+</body>
+
+</html>

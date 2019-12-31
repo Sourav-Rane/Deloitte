@@ -14,9 +14,9 @@
         }
 
         table {
-            position: fixed;
+            /* position: fixed;
             top: 100px;
-            left: 515px;
+            left: 515px; */
             background-color: aqua;
         }
     </style>
@@ -51,7 +51,7 @@
 
 <body>
     <form action="">
-        <table>
+        <table align="center">
             <tr>
                 <td>Username</td>
                 <td><input type="text" name = "username" onblur = "uname()"></td>
@@ -79,7 +79,6 @@
                     <input type="radio" name="comment"  value="Dislike" onchange="comments()">Dislike
                 </td>
             </tr>
-
 
             <tr>
                 <td colspan="2" style="text-align: center;"><input type="submit"></td>

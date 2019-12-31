@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<body>
+    
+    
+    <button id ="b1">Click</button>
+    <button id="b2">Bring it back</button>
+    <p>I</p>
+    <p>Am</p>
+    <p>in Bangalore</p>
+
+<script>
+    $(document).ready(function(){
+
+        $("#b1").click(function(){
+            $('p').toggle();
+        })
+
+        $("#b2").click(function(){
+            $('p').show();
+        })
+    })    
+</script>
+</body>
+</html>
