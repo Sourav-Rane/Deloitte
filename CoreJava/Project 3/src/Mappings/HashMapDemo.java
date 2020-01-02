@@ -3,6 +3,7 @@ package Mappings;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 
 public class HashMapDemo {
@@ -21,7 +22,7 @@ public class HashMapDemo {
 		Iterator i = set.iterator();
 
 		while (i.hasNext()) {
-			Map.Entry me = (Map.Entry) i.next();
+			Map.Entry me = (Entry) i.next();
 			System.out.println(me.getKey() + ":");
 			System.out.println(me.getValue());
 
@@ -29,8 +30,11 @@ public class HashMapDemo {
 
 		System.out.println();
 
-		double balance = ((Double) hm.get("Jhon Doe")).doubleValue();
+//		double balance = ((Double) hm.get("Jhon Doe")).doubleValue();
+		double balance = hm.get("Jhon Doe");
 		hm.put("Jhon Doe", balance + 1000);
+
+		System.out.println(hm);
 
 	}
 }
