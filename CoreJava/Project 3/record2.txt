@@ -1,0 +1,2 @@
+This is my new file
+And this content should get copied
