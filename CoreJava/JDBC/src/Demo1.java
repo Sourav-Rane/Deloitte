@@ -28,6 +28,9 @@ public class Demo1 {
 			System.out.print(res.getString(4) + " ");
 			System.out.println();
 		}
+
+		con.close();
+		smt.close();
 	}
 
 }
