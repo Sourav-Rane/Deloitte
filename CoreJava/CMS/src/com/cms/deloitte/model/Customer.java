@@ -1,6 +1,7 @@
 package com.cms.deloitte.model;
 
 import java.io.Serializable;
+import java.util.Scanner;
 
 public class Customer implements Serializable {
 
@@ -8,6 +9,18 @@ public class Customer implements Serializable {
 	private String customerName;
 	private String customerAddress;
 	private int billAmount;
+
+	public void acceptCustomerDetails() {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter customer id : ");
+		customerId = scanner.nextInt();
+		System.out.println("Enter customer name : ");
+		customerName = scanner.next();
+		System.out.println("Enter customer address : ");
+		customerAddress = scanner.next();
+		System.out.println("Enter bill amount : ");
+		billAmount = scanner.nextInt();
+	}
 
 	@Override
 	public int hashCode() {
