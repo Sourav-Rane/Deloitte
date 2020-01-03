@@ -14,11 +14,4 @@ public class CreateTable {
 
 	}
 
-	public static void main(String[] args) throws SQLException {
-		Connection conn = DBConnection.makeConnection();
-		Statement smt = conn.createStatement();
-		String query = "create table hr.product( prodid integer, prodname varchar(20) , proprice integer , qty integer)";
-		smt.execute(query);
-
-	}
 }
