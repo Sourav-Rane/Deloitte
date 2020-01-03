@@ -12,7 +12,7 @@ public class Main {
 		customer.accept();
 
 		ObjectOutputStream stream = new ObjectOutputStream(
-				new BufferedOutputStream(new FileOutputStream(new File("delu.txt"))));
+				new BufferedOutputStream(new FileOutputStream(new File("delu.txt"), true)));
 
 		stream.writeObject(customer);
 
