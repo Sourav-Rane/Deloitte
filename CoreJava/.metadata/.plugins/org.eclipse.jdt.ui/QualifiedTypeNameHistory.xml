@@ -43,6 +43,11 @@
 <fullyQualifiedTypeName name="iodemos.RandomAcessDemo"/>
 <fullyQualifiedTypeName name="java.io.RandomAccessFile"/>
 <fullyQualifiedTypeName name="java.sql.DriverManager"/>
-<fullyQualifiedTypeName name="java.sql.Statement"/>
 <fullyQualifiedTypeName name="java.sql.ResultSet"/>
+<fullyQualifiedTypeName name="java.util.Properties"/>
+<fullyQualifiedTypeName name="java.sql.Statement"/>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="DBConnection"/>
+<fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+<fullyQualifiedTypeName name="Customer"/>
 </qualifiedTypeNameHistroy>
