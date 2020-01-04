@@ -1,4 +1,4 @@
-package com.cms.deloitte.dao.impl;
+package com.cms.deloitte.client;
 
 public class Client {
 
