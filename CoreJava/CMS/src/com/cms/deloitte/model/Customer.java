@@ -23,6 +23,12 @@ public class Customer implements Serializable {
 	}
 
 	@Override
+	public String toString() {
+		return "Customer [customerId=" + customerId + ", customerName=" + customerName + ", customerAddress="
+				+ customerAddress + ", billAmount=" + billAmount + "]\n";
+	}
+
+	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;

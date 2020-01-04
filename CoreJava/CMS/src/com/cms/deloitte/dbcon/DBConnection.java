@@ -21,10 +21,8 @@ public class DBConnection {
 			String password = prop.getProperty("password");
 
 			Class.forName(driver);
-			System.out.println("Driver Loaded");
 
 			conn = DriverManager.getConnection(url, username, password);
-			System.out.println("Connected");
 
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

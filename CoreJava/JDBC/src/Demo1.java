@@ -1,6 +1,7 @@
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.sql.Statement;
 
@@ -20,15 +21,21 @@ public class Demo1 {
 
 		ResultSet res = smt.executeQuery("select * from hr.customer"); // extracts and store result
 
+		ResultSetMetaData rsmd = res.getMetaData();
+
+		int cl = rsmd.getColumnCount();
+
+		for (int i = 1; i <= cl; i++) {
+			System.out.print(rsmd.getColumnLabel(i) + " ");
+		}
+		System.out.println();
+
 		while (res.next()) {
-			String str = res.getString(1);
-			System.out.print(res.getString(1) + " ");
-			System.out.print(res.getString(2) + " ");
-			System.out.print(res.getString(3) + " ");
-			System.out.print(res.getString(4) + " ");
+			for (int i = 1; i <= cl; i++) {
+				System.out.print(res.getString(i) + " ");
+			}
 			System.out.println();
 		}
-
 		con.close();
 		smt.close();
 	}
