@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="oops.BlockDemo"/>
 <fullyQualifiedTypeName name="java.util.StringTokenizer"/>
 <fullyQualifiedTypeName name="inheritance.SubOrder"/>
 <fullyQualifiedTypeName name="NestingClasses.ChangePassword"/>
@@ -14,7 +13,6 @@
 <fullyQualifiedTypeName name="java.awt.List"/>
 <fullyQualifiedTypeName name="java.util.Collection"/>
 <fullyQualifiedTypeName name="java.util.HashSet"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.util.Collections"/>
 <fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="java.util.Comparator"/>
@@ -49,15 +47,17 @@
 <fullyQualifiedTypeName name="product.DeleteProd"/>
 <fullyQualifiedTypeName name="product.UpdateProduct"/>
 <fullyQualifiedTypeName name="java.util.Properties"/>
-<fullyQualifiedTypeName name="java.sql.Statement"/>
 <fullyQualifiedTypeName name="java.sql.ResultSet"/>
 <fullyQualifiedTypeName name="singleton_design_pattern.Payment"/>
 <fullyQualifiedTypeName name="java.io.Serializable"/>
-<fullyQualifiedTypeName name="com.cms.deloitte.model.Customer"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="com.cms.deloitte.dao.CustomerDAO"/>
 <fullyQualifiedTypeName name="com.cms.deloitte.dbcon.DBConnection"/>
 <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
 <fullyQualifiedTypeName name="com.cms.deloitte.dao.impl.LaunchCustomerApplication"/>
 <fullyQualifiedTypeName name="com.cms.deloitte.dao.impl.CustomerDAOImpl"/>
+<fullyQualifiedTypeName name="com.cms.deloitte.model.Customer"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.sql.ResultSetMetaData"/>
+<fullyQualifiedTypeName name="java.sql.Statement"/>
 </qualifiedTypeNameHistroy>

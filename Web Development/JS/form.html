@@ -1,63 +1,65 @@
-
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="ISO-8859-1">
-<title>Login form</title>
+    <meta charset="ISO-8859-1">
+    <title>Login form</title>
 </head>
+
 <body>
 
 
-<div id="div1"></div>
-<button id="btn">Change</button>
+    <div id="div1"></div>
+    <button id="btn">Change</button>
 
 
 
-<form>
-<h2>Login form</h2> 
-<table cellspacing="10" cellpadding="10" border="0" align="center">
-<caption>Login Form</caption>
-<tr>
-<td>User Name:<input type="text" name="username" id="username" required /></td>
-</tr>
-<tr>
-<td>pass:<input type="password" name="password" id="password"required /></td>
-</tr>
-<tr>
-    <td>renter pass:<input type="password" name="cnfpassword" id="cnfpassword"  /></td>
-    </tr>
-    
-
-<td><input type="button" value="validate" id="val" onclick="validate()"/></td>
-<td><input type="reset"  id="reset" /></td>
-</tr>
-</table>
-</form>
-
-<script>
-
-    document.querySelector('#btn').addEventListener('click' , function(){
-        var x = document.querySelector('#div1');
-        x.textContent = "Hi guys !";
-        x.innerHTML += "<span style = 'color:red'> Hello World </span>";
-    });
+    <form>
+        <h2>Login form</h2>
+        <table cellspacing="10" cellpadding="10" border="0" align="center">
+            <caption>Login Form</caption>
+            <tr>
+                <td>User Name:<input type="text" name="username" id="username" required /></td>
+            </tr>
+            <tr>
+                <td>pass:<input type="password" name="password" id="password" required /></td>
+            </tr>
+            <tr>
+                <td>renter pass:<input type="password" name="cnfpassword" id="cnfpassword" /></td>
+            </tr>
 
 
-    function validate(){
-        var x = document.getElementById('username').value;
-        if(x == "")
-            alert("No name entered");
+            <td><input type="button" value="validate" id="val" onclick="validate()" /></td>
+            <td><input type="reset" id="reset" /></td>
+            </tr>
+        </table>
+    </form>
 
-        var y = document.getElementById('password').value;
-        var z = document.getElementById('cnfpassword').value;
-        if(y == null)
-        alert("no name entered");
-        else if(y.length < 6)
-        alert("insufficient length!");
-        else if( y!==z)
-        alert("Passwords dont match !");
-    }
-</script>
+    <script>
+
+        document.querySelector('#btn').addEventListener('click', function () {
+            var x = document.querySelector('#div1');
+            x.textContent = "Hi guys !";
+            x.innerHTML += "<span style = 'color:red'> Hello World </span>";
+        });
+
+
+        function validate() {
+            var x = document.getElementById('username').value;
+            if (x == "")
+                alert("No name entered");
+
+            var y = document.getElementById('password').value;
+            var z = document.getElementById('cnfpassword').value;
+            if (y == null)
+                alert("no name entered");
+            else if (y.length < 6)
+                alert("insufficient length!");
+            else if (y !== z)
+                alert("Passwords dont match !");
+        }
+    </script>
 
 </body>
+
 </html>
