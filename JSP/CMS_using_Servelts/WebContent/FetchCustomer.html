@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <form action="FetchCustomer" onsubmit="return  validate()">
+
+        <table cellsapcing="10" cellpadding="10" align="center">
+            <h2 align="center">Enter Customer ID</h2>
+            <tr>
+                <td>CUSTOMER ID:</td>
+                <td><input type="text" name="cid" id="cid"></td>
+                <td id="ciderr"></td>
+            </tr>
+
+            <tr>
+                <td><input type="submit" value="FETCH"></td>
+                <td><input type="reset" value="CLEAR"></td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        function validate() {
+
+            var cid, name, addr, bill;
+            var ct, cn, ca, cb;
+            cid = document.getElementById('cid').value;
+            if (cid.length < 1) {
+                document.getElementById('ciderr').innerHTML = "<font color = red> Enter ID to proceed </font>";
+                return false;
+
+            }
+            else {
+                document.getElementById('ciderr').innerHTML = "";
+                return true;
+            }
+
+        }
+
+
+    </script>
+</body>
+
+</html>
