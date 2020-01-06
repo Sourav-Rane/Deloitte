@@ -1,6 +1,7 @@
 package com;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -15,19 +16,26 @@ import com.cms.deloitte.model.Customer;
  */
 public class CustomerServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	
+	public void init(){
+		System.out.println("Init called !");
+	}
        
     /**
      * @see HttpServlet#HttpServlet()
      */
     public CustomerServlet() {
         super();
-        // TODO Auto-generated constructor stub
+        System.out.println("Constructor called");
     }
 
+   
 	/**
 	 * @see HttpServlet#service(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("Service called");
+		
 		int customerid = Integer.parseInt(request.getParameter("cid"));
 		String customername = request.getParameter("username");
 		String customeraddr = request.getParameter("caddr");
@@ -53,7 +61,10 @@ public class CustomerServlet extends HttpServlet {
 		}
 		
 		
-		
+	}
+	
+	public void destroy() {
+		System.out.println("Destroy called");
 	}
 
 }
