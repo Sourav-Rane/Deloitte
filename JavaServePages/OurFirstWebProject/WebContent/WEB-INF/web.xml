@@ -2,7 +2,7 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
   <display-name>OurFirstWebProject</display-name>
   <welcome-file-list>
-    <welcome-file>index.html</welcome-file>
+    <welcome-file>Home.html</welcome-file>
     <welcome-file>index.htm</welcome-file>
     <welcome-file>index.jsp</welcome-file>
     <welcome-file>default.html</welcome-file>
@@ -39,4 +39,25 @@
     <servlet-name>CustomerServlet</servlet-name>
     <url-pattern>/CustomerServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ConnectServlet</display-name>
+    <servlet-name>ConnectServlet</servlet-name>
+    <servlet-class>com.ConnectServlet</servlet-class>
+    <init-param>
+      <description></description>
+      <param-name>Company</param-name>
+      <param-value>Deloitte</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ConnectServlet</servlet-name>
+    <url-pattern>/ConnectServlet</url-pattern>
+  </servlet-mapping>
+  
+  <context-param>
+  	<param-name>itemName</param-name>
+ 	<param-value>Lakme</param-value>
+  </context-param>
+  
 </web-app>

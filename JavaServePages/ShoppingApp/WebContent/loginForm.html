@@ -6,7 +6,7 @@
  
 </head>
 <body>
-	<form action = "Welcome" onsubmit = "return  validate()">
+	<form  action = "AuthenticationServlet" onsubmit = "return  validate()">
 
 		<table cellsapcing="10" cellpadding="10" align="center">
             <h2 align="center">Login Form</h2>
@@ -15,6 +15,11 @@
 				<td>CUSTOMER username:</td>
                 <td><input type="text" name="username" id="username"></td>
                 <td id="nameerr"></td>
+            </tr>
+            
+            <tr>
+				<td>CUSTOMER Type:</td>
+                <td><input type="text" name="usr_type"></td>
             </tr>
             
             <tr>
