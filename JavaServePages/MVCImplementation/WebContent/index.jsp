@@ -22,12 +22,18 @@
 
 <hr>
 
+<p:name nameToPrint="Khalil"></p:name>
+
+
+
+<hr>
+
 
 <%
 for(int i =0;i<10;i++)
 {
 %>
-<p:name></p:name> <br>
+
 <%
 }
 %>

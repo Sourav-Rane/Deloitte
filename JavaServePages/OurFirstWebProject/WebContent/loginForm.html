@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Login form</title>
+ 
+</head>
+<body>
+	<form  action = "ConnectServlet" onsubmit = "return  validate()">
+
+		<table cellsapcing="10" cellpadding="10" align="center">
+            <h2 align="center">Login Form</h2>
+            
+			<tr>
+				<td>CUSTOMER username:</td>
+                <td><input type="text" name="username" id="username"></td>
+                <td id="nameerr"></td>
+            </tr>
+            
+            
+            <tr>
+				<td>CUSTOMER passwword:</td>
+                <td><input type="password" name="password" id="password"></td>
+                <td id="passworderr"></td>
+            </tr>
+            
+            
+			<tr>
+				<td><input type="submit"></td>
+				<td><input type="reset" value="CLEAR"></td>
+			</tr>
+		</table>
+	</form>
+
+    <h3 id= "print" style="color: green; text-align: center;"></h3>
+
+    <script>
+
+        function validate(){
+   
+        var  name , addr;
+        var   cn , ca ;
+
+        
+        name = document.getElementById('username').value;
+        if(name.length == 0)
+        {
+            document.getElementById('nameerr').innerHTML = "<font color = red> Enter your name </font>";  
+            cn = false
+            
+        }
+        else{
+            document.getElementById('nameerr').innerHTML = "";
+            cn = true;
+         }
+
+        addr = document.getElementById('password').value;
+
+        if(addr.length > 6)
+        { document.getElementById('passworderr').innerHTML = "";
+         ca = true;
+        }
+        else
+        {
+            document.getElementById('passworderr').innerHTML = "<font color = red> Password len < 6 </font>";  
+            ca = false;
+           
+        }
+
+        
+
+       
+        if(ca  && cn )
+    {
+        
+    }
+    else
+    return false
+
+    }
+    
+  
+    </script>
+</body>
+</html>
