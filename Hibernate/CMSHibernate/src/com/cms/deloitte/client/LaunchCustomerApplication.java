@@ -20,7 +20,9 @@ public class LaunchCustomerApplication {
 			System.out.println("#### 3.Delete Customer ####");
 			System.out.println("#### 4.Fetch single customer ####");
 			System.out.println("#### 5.List all customers####");
-			System.out.println("#### 6.EXIT ####\n");
+			System.out.println("#### 6.List all customers ( by bill )####");
+			System.out.println("#### 7.List all customers (by address and bill )####");
+			System.out.println("#### 8.EXIT ####\n");
 
 			Scanner scanner = new Scanner(System.in);
 			System.out.println("Enter your choice (1-6)");
@@ -93,8 +95,27 @@ public class LaunchCustomerApplication {
 				System.out.println("\n");
 			}
 				break;
+				
+			case 6:{
+				System.out.println("Please enter amount to search");
+				int billAmount = scanner.nextInt();
+				List<Customer> customers = customerDAO.filterCustomer(billAmount);
+				System.out.println(customers);
+				
+			}break;
+			
+			
+			case 7:{
+				System.out.println("Please enter amount to search");
+				int billAmount = scanner.nextInt();
+				System.out.println("Please enter address to search");
+				String customerAddress = scanner.next();
+				List<Customer> customers = customerDAO.filterCustomer(customerAddress,billAmount);
+				System.out.println(customers);
+				
+			}break;
 
-			case 6:
+			case 8:
 				System.out.println("Thanks for using my customer app");
 				System.exit(0);
 
