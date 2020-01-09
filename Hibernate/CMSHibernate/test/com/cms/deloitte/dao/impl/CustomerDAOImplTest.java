@@ -62,7 +62,10 @@ class CustomerDAOImplTest {
 
 	@Test
 	void testFindCustomer() {
-		fail("Not yet implemented");
+		Customer customer = new Customer(1992, "jay" , "pune" , 1000);
+		customerDAO.addCustomer(customer);
+		Customer customer2 = customerDAO.findCustomer(customer.getCustomerId());
+		assertEquals(customer, customer2);
 	}
 
 	@Test

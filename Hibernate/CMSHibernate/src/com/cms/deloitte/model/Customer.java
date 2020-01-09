@@ -112,4 +112,14 @@ public class Customer implements Serializable {
 
 	}
 
+	public Customer(int customerId, String customerName, String customerAddress, int billAmount) {
+		super();
+		this.customerId = customerId;
+		this.customerName = customerName;
+		this.customerAddress = customerAddress;
+		this.billAmount = billAmount;
+	}
+
+
+
 }
