@@ -17,8 +17,8 @@ public class Client {
 	
 
 		Transaction tx = session.beginTransaction();
-//		Employee employee = new Employee(1223,"Rajiv");
-//		session.save(employee);
+		Employee employee = new Employee(1223,"Sundhi");
+		session.save(employee);
 		
 		
 		RegularEmployee employeeReg = new RegularEmployee(41000,8908);

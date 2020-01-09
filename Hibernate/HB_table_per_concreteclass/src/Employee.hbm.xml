@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.Employee" table="hr.EmployeeDetails_tpcs">
+		<id name="employeeid" column="empid" />
+		<property name="employeeName" column="empname" length="10" />
+	</class>
+
+	<class name="com.RegularEmployee"  table="hr.RegularEmployee_tpcs">
+		<id name = "employeeid"/>
+		<property name="employeeName" column="empname" length="10" />
+		<property name="salary"></property>
+		<property name="bonus"></property>
+		
+	</class>
+
+	<class name="com.ContractEmployee" table="hr.ContractEmployee_tpcs">
+		<id name = "employeeid"/>
+		<property name="employeeName" column="empname" length="10" />
+		<property name="contractDuration"></property>
+		<property name="payPerDay"></property>
+		
+	</class>
+	
+</hibernate-mapping>
