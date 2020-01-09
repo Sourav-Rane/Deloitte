@@ -14,7 +14,6 @@ public class Client {
 		Session session = factory.openSession();
 
 		
-	
 
 		Transaction tx = session.beginTransaction();
 		Employee employee = new Employee(1223,"Rajiv");

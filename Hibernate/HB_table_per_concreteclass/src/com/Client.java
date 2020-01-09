@@ -17,20 +17,20 @@ public class Client {
 	
 
 		Transaction tx = session.beginTransaction();
-		Employee employee = new Employee(1223,"Sundhi");
-		session.save(employee);
+//		Employee employee = new Employee(1223,"Sundhi");
+//		session.save(employee);
 		
 		
 		RegularEmployee employeeReg = new RegularEmployee(41000,8908);
-//		employeeReg.setEmployeeid(1224);
-//		employeeReg.setEmployeeName("Arjun");
-//		session.save(employeeReg);
+		employeeReg.setEmployeeid(1224);
+		employeeReg.setEmployeeName("Arjun");
+		session.save(employeeReg);
 
 		
 		ContractEmployee employeeCon = new ContractEmployee(20,15000);
-		employeeCon.setEmployeeid(1225);
-		employeeCon.setEmployeeName("Tufail");
-		session.save(employeeCon);
+//		employeeCon.setEmployeeid(1225);
+//		employeeCon.setEmployeeName("Tufail");
+//		session.save(employeeCon);
 		
 		
 		tx.commit();
