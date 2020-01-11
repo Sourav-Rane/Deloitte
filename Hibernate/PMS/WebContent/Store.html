@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Store page</title>
+ 
+</head>
+<body align="center">
+	<form action = "StoreProduct" >
+
+		<table cellsapcing="10" cellpadding="10" align="center">
+            <h2 align="center">Enter Product Details</h2>
+            <tr>
+				<td>PRODUCT ID:</td>
+                <td><input type="number" name="pid" id="pid"></td>
+                <td id="piderr"></td>
+            </tr>
+            
+			<tr>
+				<td>PRODUCT NAME:</td>
+                <td><input type="text" name="productname" id="productname"></td>
+                <td id="productnameerr"></td>
+            </tr>
+            
+            <tr>
+				<td>PRODUCT PRICE:</td>
+                <td><input type="number" name="price" id="price"></td>
+                <td id="priceerr"></td>
+            </tr>
+            
+			<tr>
+				<td>PRODUCT QTY:</td>
+                <td><input type="number" name="qty" id="qty"></td>
+                <td id="qtyerr"></td>
+            </tr>
+            
+			<tr>
+				<td><input type="submit" value="store"></td>
+				<td><input type="reset" value="CLEAR"></td>
+			</tr>
+		</table>
+	</form>
+	
+	<a href="index.html">Back to homepage</a>
+
+    <script>
+
+    //     function validate(){
+   
+    //     var cid , name , addr , bill;
+    //     var ct , cn , ca , cb;
+
+    //     cid = document.getElementById('pid').value;
+    //     if(cid.length < 6)
+    //     {
+    //         document.getElementById('piderr').innerHTML = "<font color = red> ID should be >= 6 digits </font>";
+    //         ct = false
+           
+    //     }
+    //     else{
+    //     document.getElementById('ciderr').innerHTML = "";
+    //     ct = true
+    //     }
+      
+    //     name = document.getElementById('username').value;
+    //     if(name.length == 0)
+    //     {
+    //         document.getElementById('nameerr').innerHTML = "<font color = red> Enter your name </font>";  
+    //         cn = false
+            
+    //     }
+    //     else{
+    //         document.getElementById('nameerr').innerHTML = "";
+    //         cn = true;
+    //      }
+
+    //     addr = document.getElementById('caddr').value;
+
+    //     if(addr == 'Pune' || addr == 'Mumbai')
+    //     { document.getElementById('addrerr').innerHTML = "";
+    //      ca = true;
+    //     }
+    //     else
+    //     {
+    //         document.getElementById('addrerr').innerHTML = "<font color = red> Only Pune and Mumbai is allowed </font>";  
+    //         ca = false;
+           
+    //     }
+
+    //     bill = document.getElementById('bill').value;
+    //     if(parseInt(bill) < 0)
+    //     {
+    //         document.getElementById('billerr').innerHTML = "<font color = red> Bill cannot be -ve </font>";  
+    //         cb = false;
+          
+    //     }
+    //     else{
+    //     document.getElementById('billerr').innerHTML = "";
+    //     cb = true;
+    //     }
+
+       
+    //     if(ca && cb && cn && ct)
+    // {
+    //     document.getElementById('print').innerHTML += "Customer ID : "+cid+"<br>";
+    //     document.getElementById('print').innerHTML += "Customer Name : "+name+"<br>";
+    //     document.getElementById('print').innerHTML += "Customer Addr : "+addr+"<br>";
+    //     document.getElementById('print').innerHTML += "Customer Bill : "+bill+"<br>";
+    // }
+    // else
+    // return false
+
+    // }
+    
+  
+    </script>
+</body>
+</html>

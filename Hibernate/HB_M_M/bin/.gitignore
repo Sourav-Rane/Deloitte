@@ -1,0 +1,6 @@
+/CreditCard.hbm.xml
+/Customer.hbm.xml
+/employeeAddress.hbm.xml
+/hibernate.cfg.xml
+/manytomany/
+/onetomany/
