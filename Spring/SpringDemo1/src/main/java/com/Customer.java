@@ -3,6 +3,7 @@ package com;
 
 import java.io.Serializable;
 import java.util.Scanner;
+import java.util.Set;
 
 public class Customer implements Serializable {
 	/**
@@ -13,7 +14,37 @@ public class Customer implements Serializable {
 	private String customerName;
 	private String customerAddress;
 	private ContactDetails contactDetails;
+	private Set cards;
 	
+	public void displayCust() {
+		customerAddress = "Not Available";
+		System.out.println("#### Display customer ");
+	}
+	
+	public void cleanUpMyApp() {
+		System.out.println("#### cleaning up the app ...");
+		customerAddress = null;
+	}
+	
+	public Set getCards() {
+		return cards;
+	}
+
+	public void setCards(Set cards) {
+		this.cards = cards;
+	}
+
+	public Customer(int customerId, String customerName, String customerAddress, ContactDetails contactDetails,
+			Set cards, int billAmount) {
+		super();
+		this.customerId = customerId;
+		this.customerName = customerName;
+		this.customerAddress = customerAddress;
+		this.contactDetails = contactDetails;
+		this.cards = cards;
+		this.billAmount = billAmount;
+	}
+
 	public ContactDetails getContactDetails() {
 		return contactDetails;
 	}
@@ -102,6 +133,13 @@ public class Customer implements Serializable {
 		this.customerAddress = customerAddress;
 	}
 
+	@Override
+	public String toString() {
+		return "Customer [customerId=" + customerId + ", customerName=" + customerName + ", customerAddress="
+				+ customerAddress + ", contactDetails=" + contactDetails + ", cards=" + cards + ", billAmount="
+				+ billAmount + "]";
+	}
+
 	public int getBillAmount() {
 		return billAmount;
 	}
@@ -110,11 +148,7 @@ public class Customer implements Serializable {
 		this.billAmount = billAmount;
 	}
 
-	@Override
-	public String toString() {
-		return "Customer [customerId=" + customerId + ", customerName=" + customerName + ", customerAddress="
-				+ customerAddress + ", contactDetails=" + contactDetails + ", billAmount=" + billAmount + "]";
-	}
+	
 
 }
 

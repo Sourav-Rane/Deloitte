@@ -2,6 +2,7 @@ package com.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Scope;
 
 import com.ContactDetails;
 import com.Customer;
@@ -10,6 +11,7 @@ import com.Customer;
 public class AppConfig {
 
 	@Bean
+	@Scope(value="singleton")
 	public Customer getCustomer() {
 		return new Customer();
 	}

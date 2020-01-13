@@ -4,9 +4,11 @@ package com;
 import java.io.Serializable;
 import java.util.Scanner;
 
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
-
-public class Customer implements Serializable {
+import javax.annotation.*;
+public class Customer implements Serializable, InitializingBean , DisposableBean {
 	/**
 		 * 
 		 */
@@ -18,6 +20,15 @@ public class Customer implements Serializable {
 	@Autowired(required = false)
 	private ContactDetails contactDetails;
 	
+	@PostConstruct
+	public void dd() {
+		System.out.println("###INIT");
+	}
+	@PreDestroy
+	public void dd2() {
+		System.out.println("###DESTORY");
+	}
+
 	public ContactDetails getContactDetails() {
 		return contactDetails;
 	}
@@ -118,6 +129,14 @@ public class Customer implements Serializable {
 	public String toString() {
 		return "Customer [customerId=" + customerId + ", customerName=" + customerName + ", customerAddress="
 				+ customerAddress + ", contactDetails=" + contactDetails + ", billAmount=" + billAmount + "]";
+	}
+	public void destroy() throws Exception {
+		System.out.println("### DESTROY by interface");
+		
+	}
+	public void afterPropertiesSet() throws Exception {
+		System.out.println("### INIT by interface");
+		
 	}
 
 }

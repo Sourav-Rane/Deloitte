@@ -10,12 +10,12 @@ public class AppSpring {
 		
 		Resource resource = new ClassPathResource("beans.xml");
 		BeanFactory factory = new XmlBeanFactory(resource);
-//		Customer customer = (Customer)factory.getBean("cust");
 		Customer customer = (Customer)factory.getBean("cust");
-		
-//		
-//        customer.setCustomerName("Abhishek");
+		Customer customer2 = (Customer)factory.getBean("cust");
+
         System.out.println(customer);
+        System.out.println(customer2);
+        
 	}
 	
 }

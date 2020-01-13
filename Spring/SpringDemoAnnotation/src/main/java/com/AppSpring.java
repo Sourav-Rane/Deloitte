@@ -17,11 +17,19 @@ public class AppSpring {
 		ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
 //		Customer customer = (Customer)factory.getBean("cust"); // no need of giving this name too..
 		Customer customer = context.getBean(Customer.class);
+		Customer customer2 = context.getBean(Customer.class);
 	
 		customer.setCustomerId(190);
         customer.setCustomerName("Abhishek");
         customer.setCustomerAddress("Pune");
         customer.setBillAmount(1000);
+        
+        
+    	customer2.setCustomerId(190);
+        customer2.setCustomerName("Abhishek");
+        customer2.setCustomerAddress("Pune");
+        customer2.setBillAmount(1000);
+        
         
 //        ContactDetails contactDetails = context.getBean(ContactDetails.class);
 //        
@@ -31,6 +39,7 @@ public class AppSpring {
 //        customer.setContactDetails(contactDetails);
         
         System.out.println(customer);
+        System.out.println(customer2);
 	}
 	
 }
