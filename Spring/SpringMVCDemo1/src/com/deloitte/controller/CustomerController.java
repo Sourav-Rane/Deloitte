@@ -1,5 +1,6 @@
 package com.deloitte.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -11,7 +12,9 @@ import com.deloitte.model.Customer;
 @Controller
 public class CustomerController {
 	
-	CustomerDAO customerDAO = new CustomerDAOImpl();
+//	CustomerDAO customerDAO = new CustomerDAOImpl();
+	@Autowired
+	CustomerDAO customerDAO;
 	
 	/*
 	 * @RequestMapping("/customerSave") public String saveCustomerDetails(Customer

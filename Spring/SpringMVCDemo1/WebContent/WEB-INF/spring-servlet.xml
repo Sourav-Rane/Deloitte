@@ -19,4 +19,9 @@
     </bean>
     
     
+    <bean id="customerDAO" class="com.deloitte.dao.impl.CustomerDAOImpl">
+    
+    </bean>
+    
+    
  </beans>
