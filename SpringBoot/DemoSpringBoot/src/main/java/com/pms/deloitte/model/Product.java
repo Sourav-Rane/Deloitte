@@ -1,4 +1,4 @@
-package com.pms.deloitte.controller;
+package com.pms.deloitte.model;
 
 import java.io.Serializable;
 
