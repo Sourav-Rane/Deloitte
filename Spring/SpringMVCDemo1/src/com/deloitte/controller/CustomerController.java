@@ -66,10 +66,33 @@ public class CustomerController {
 		System.out.println("Customer Controller customerDetails");
 		ModelAndView view = new ModelAndView();
 		view.setViewName("allCustomerRecords");
+		
 		List<Customer> allCustomers = customerService.listCustomer();
+//		view.addObject("allCust", allCustomers);
 		session.setAttribute("allCust", allCustomers);
 		return view;
 
+	}
+	
+	 
+	@RequestMapping("fetchCustomer")
+	public ModelAndView fetchCustomer(Customer customer) {
+		System.out.println("Customer Controller fetchCustomer");
+		ModelAndView view = new ModelAndView();
+		Customer retrievedCustomer = customerService.findCustomer(customer.getCustomerId());
+		view.addObject("command",retrievedCustomer);
+		view.setViewName("CustomerForm");
+		return view;
+	}
+	
+	
+	@RequestMapping("customerForm")
+	public ModelAndView customerForm(Customer customer) {
+		System.out.println("Customer Controller customerForm");
+		ModelAndView view = new ModelAndView();
+		view.addObject("command", new Customer());
+		view.setViewName("CustomerForm");
+		return view;
 	}
 
 }

@@ -24,7 +24,7 @@ public class CustomerServiceImpl implements CustomerService {
 	@Override
 	public boolean updateCustomer(Customer customer) {
 		System.out.println("Customer Service updateCustomer");
-		if (customer.getBillAmount() < 0)
+		if (customer.getBillAmount() > 0)
 			return customerDAO.updateCustomer(customer);
 		return false;
 	}

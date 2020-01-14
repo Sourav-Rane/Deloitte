@@ -21,7 +21,7 @@ public class CustomerDAOImpl implements CustomerDAO {
 
 	@Override
 	public boolean addCustomer(Customer customer) {
-
+		System.out.println("Customer DAO addCustomer ");
 		int result = 0;
 		Connection connection = DBConnection.makeConnection();
 		try {
@@ -45,7 +45,7 @@ public class CustomerDAOImpl implements CustomerDAO {
 
 	@Override
 	public boolean updateCustomer(Customer customer) {
-
+		System.out.println("Customer DAO updateCustomer ");
 		int result = 0;
 		Connection connection = DBConnection.makeConnection();
 		try {
@@ -69,7 +69,7 @@ public class CustomerDAOImpl implements CustomerDAO {
 
 	@Override
 	public boolean deleteCustomer(int customerId) {
-
+		System.out.println("Customer DAO deleteCustomer ");
 		int result = 0;
 		Connection connection = DBConnection.makeConnection();
 		try {
@@ -87,6 +87,7 @@ public class CustomerDAOImpl implements CustomerDAO {
 
 	@Override
 	public Customer findCustomer(int customerId) {
+		System.out.println("Customer DAO findCustomer ");
 		Customer customer = new Customer();
 
 		Connection connection;
@@ -113,7 +114,7 @@ public class CustomerDAOImpl implements CustomerDAO {
 
 	@Override
 	public boolean isCustomerExists(int customerId) {
-
+		System.out.println("Customer DAO isCustomerExists ");
 		boolean result = false;
 		Connection connection;
 		try {
@@ -136,6 +137,7 @@ public class CustomerDAOImpl implements CustomerDAO {
 
 	@Override
 	public List<Customer> listCustomer() {
+		System.out.println("Customer DAO listCustomer ");
 
 		boolean result = false;
 		Connection connection;

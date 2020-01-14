@@ -1,8 +1,12 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@ taglib uri = "http://www.springframework.org/tags/form" prefix="f" %>
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Customer login form</title>
+<title>Customer login form - Spring forms</title>
 <script type="text/javascript">
 	function validate() {
 		cid = false
@@ -67,48 +71,45 @@
 </script>
 </head>
 <body>
-	<form action="customerSave.do">
-		<h2>Customer Login form</h2>
+	<f:form action="customerSave.do" commandName="command">
+		<h2>Customer MVC form</h2>
 		<table cellspacing="10" cellpadding="10" border="0" align="center">
 			<caption>Login Form</caption>
 			<tr>
 				<td>Customer ID:</td>
-				<td><input type= "text" name="customerId" id="customerId" /></td>
-				<td><span id="errorCustomerId"></span></td>
-				
-				
+				<td><f:input path="customerId" /></td>
+				<td><span id="errorCustomerId"></span></td>	
 			</tr>
 			<tr>
 				<td>Customer Name:</td>
-				<td><input type="text" name="customerName" id="customerName" /></td>
+				<td><f:input path="customerName"/></td>
 				<td><span id="errorCustomerName"></span></td>
 			</tr>
 			<tr>
 				<td>Customer Address:</td>
-				<td><input type="text" name="customerAddress"
-					id="customerAddress" /></td>
+				<td><f:input path="customerAddress" /></td>
 				<td><span id="errorCustomerAddress"></span></td>
 			</tr>
 			<tr>
 				<td>Bill Amount:</td>
-				<td><input type="number" name="billAmount" id="billAmount" /></td>
+				<td><f:input path="billAmount" /></td>
 				<td><span id="errorbillAmount"></span></td>
 			</tr>
 			<tr>
 				<td colspan="2" align="center"><input type="submit" value="Submit"
-					id="Go" onclick="validate()"/></td>
+					id="Go" onsubmit=" return validate()"/></td>
 					
 					<td colspan="2" align="center"><input type="submit" value="Update"
 					formaction="updateCustomer.do"/></td>
 					
 					<td colspan="2" align="center"><input type="submit" value="Fetch"
-					formaction="fetch.do"/></td>
+					formaction="fetchCustomer.do"/></td>
 			</tr>
 			<tr>
 				<td colspan="2" align="center"><input type="reset" id="reset" /></td>
 			</tr>	
 		</table>
 		<div id=display align="center"></div>
-	</form>
+	</f:form>
 </body>
 </html>
