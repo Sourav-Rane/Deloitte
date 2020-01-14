@@ -1,5 +1,9 @@
 package com.deloitte.controller;
 
+import java.util.List;
+
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -8,14 +12,15 @@ import org.springframework.web.servlet.ModelAndView;
 import com.deloitte.dao.CustomerDAO;
 import com.deloitte.dao.impl.CustomerDAOImpl;
 import com.deloitte.model.Customer;
+import com.deloitte.service.CustomerService;
 
 @Controller
 public class CustomerController {
-	
+
 //	CustomerDAO customerDAO = new CustomerDAOImpl();
 	@Autowired
-	CustomerDAO customerDAO;
-	
+	CustomerService customerService;
+
 	/*
 	 * @RequestMapping("/customerSave") public String saveCustomerDetails(Customer
 	 * customer) { System.out.println(customer); customerDAO.addCustomer(customer);
@@ -24,33 +29,47 @@ public class CustomerController {
 
 	@RequestMapping("customerSave")
 	public ModelAndView saveCustomerDetails(Customer customer) {
+		System.out.println("Customer Controller saveCustomerDetails");
 		System.out.println(customer);
-		customerDAO.addCustomer(customer);
+		boolean result = customerService.addCustomer(customer);
 		ModelAndView view = new ModelAndView();
 		view.setViewName("result");
-		view.addObject("custo",customer);
+		if(result == true)
+			view.addObject("custo", customer);
+		else
+			view.addObject("custo", "Bill AMount cant be negative !!");
 		return view;
-		
+
 	}
-	
-	
+
 	@RequestMapping("updateCustomer")
 	public ModelAndView updateCustomerDetails(Customer customer) {
+		System.out.println("Customer Controller updateCustomerDetails");
 		System.out.println(customer);
 		ModelAndView view = new ModelAndView();
 		view.setViewName("result");
-		
-		if(customerDAO.isCustomerExists(customer.getCustomerId()))
-		{
-			view.addObject("custo", customer.getCustomerName()+" has been saved successfully ! ");
-			customerDAO.updateCustomer(customer);
-			
-		}else {
-			view.addObject("custo", customer.getCustomerId()+" Does not exist !");
+
+		if (customerService.isCustomerExists(customer.getCustomerId())) {
+			view.addObject("custo", customer.getCustomerName() + " has been saved successfully ! ");
+			customerService.updateCustomer(customer);
+
+		} else {
+			view.addObject("custo", customer.getCustomerId() + " Does not exist !");
 		}
-		
+
 		return view;
-		
+
 	}
-	
+
+	@RequestMapping("customerDetails")
+	public ModelAndView customerDetails(HttpSession session) {
+		System.out.println("Customer Controller customerDetails");
+		ModelAndView view = new ModelAndView();
+		view.setViewName("allCustomerRecords");
+		List<Customer> allCustomers = customerService.listCustomer();
+		session.setAttribute("allCust", allCustomers);
+		return view;
+
+	}
+
 }

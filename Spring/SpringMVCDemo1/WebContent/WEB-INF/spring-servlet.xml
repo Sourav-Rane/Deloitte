@@ -20,7 +20,10 @@
     
     
     <bean id="customerDAO" class="com.deloitte.dao.impl.CustomerDAOImpl">
+    </bean>
     
+    
+    <bean id="customerService" class="com.deloitte.service.impl.CustomerServiceImpl">
     </bean>
     
     
