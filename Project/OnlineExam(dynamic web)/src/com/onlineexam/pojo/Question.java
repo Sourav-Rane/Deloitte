@@ -21,6 +21,10 @@ public class Question {
 		this.answer = answer;
 	}
 	
+	public Question() {
+		// TODO Auto-generated constructor stub
+	}
+
 	@Override
 	public String toString() {
 		return "Question [questionId=" + questionId + ", category=" + category + ", question=" + question + ", choice1="
