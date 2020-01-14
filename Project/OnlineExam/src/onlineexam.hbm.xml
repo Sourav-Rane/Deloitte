@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+	<class name="com.com.onlineexam.pojo.Question"
+		table="hr.question">
+		<id name="questionId" type="int" column="questionId">
+			<generator class="increment" />
+		</id>
+		<property name="category" column="category" />
+		<property name="question" column="question" />
+		<property name="choice1" column="choice1" />
+		<property name="choice2" column="choice2" />
+		<property name="choice3" column="choice3" />
+		<property name="answer" column="answer" />
+
+	</class>
+
+	<class name="com.com.onlineexam.pojo.Users" table="hr.users">
+		<id name="userId" type="int" column="userId">
+			<generator class="increment" />
+		</id>
+		<property name="userEmail" column="userEmail" />
+		<property name="userPassword" column="userPassword" />
+	</class>
+	
+	
+	
+	<class name="com.com.onlineexam.pojo.Users" table="hr.users">
+		<id name="userId" type="int" column="userId">
+			<generator class="increment" />
+		</id>
+		<property name="userEmail" column="userEmail" />
+		<property name="userPassword" column="userPassword" />
+	</class>
+
+
+
+</hibernate-mapping>
