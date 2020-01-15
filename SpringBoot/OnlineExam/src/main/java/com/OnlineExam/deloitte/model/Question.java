@@ -11,10 +11,8 @@ import javax.persistence.Table;
 @Table(schema = "hr", name = "question")
 public class Question {
 
+
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private String questionId;
-	@Column
 	private String questionCategory;
 	@Column
 	private String question;
@@ -28,15 +26,9 @@ public class Question {
 	private String questionAnswer;
 	@Override
 	public String toString() {
-		return "Question [questionId=" + questionId + ", questionCategory=" + questionCategory + ", question="
-				+ question + ", questionChoice1=" + questionChoice1 + ", questionChoice2=" + questionChoice2
-				+ ", questionChoice3=" + questionChoice3 + ", questionAnswer=" + questionAnswer + "]";
-	}
-	public String getQuestionId() {
-		return questionId;
-	}
-	public void setQuestionId(String questionId) {
-		this.questionId = questionId;
+		return "Question [questionCategory=" + questionCategory + ", question=" + question + ", questionChoice1="
+				+ questionChoice1 + ", questionChoice2=" + questionChoice2 + ", questionChoice3=" + questionChoice3
+				+ ", questionAnswer=" + questionAnswer + "]";
 	}
 	public String getQuestionCategory() {
 		return questionCategory;
@@ -77,20 +69,7 @@ public class Question {
 	public Question() {
 		super();
 	}
-	public Question(String questionCategory, String question, String questionChoice1, String questionChoice2,
-			String questionChoice3, String questionAnswer) {
-		super();
-		this.questionCategory = questionCategory;
-		this.question = question;
-		this.questionChoice1 = questionChoice1;
-		this.questionChoice2 = questionChoice2;
-		this.questionChoice3 = questionChoice3;
-		this.questionAnswer = questionAnswer;
-	}
-	
-	
-	
-	
+
 	
 	
 }
