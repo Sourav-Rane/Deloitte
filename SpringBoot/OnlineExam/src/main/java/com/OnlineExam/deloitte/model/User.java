@@ -1,10 +1,19 @@
 package com.OnlineExam.deloitte.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(schema = "hr", name = "user")
 public class User {
 	
-
+	@Column
 	private String userName;
+	@Id
 	private String userEmail;
+	@Column
 	private String userPassword;
 	@Override
 	public String toString() {
