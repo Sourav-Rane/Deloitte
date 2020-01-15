@@ -29,14 +29,14 @@ public class ProductController {
 
 	}
 
-	@RequestMapping("/updateProduct")
-	public ModelAndView updateProduct(Product product) {
-		System.out.println("####### Product Controller updateProduct");
-		ModelAndView view = new ModelAndView("redirect:/product");
-		productService.updateProduct(product);
-		return view;
-
-	}
+//	@RequestMapping("/updateProduct")
+//	public ModelAndView updateProduct(Product product) {
+//		System.out.println("####### Product Controller updateProduct");
+//		ModelAndView view = new ModelAndView("redirect:/product");
+//		productService.updateProduct(product);
+//		return view;
+//
+//	}
 
 	@RequestMapping("/editProduct/{prodId}")
 	public ModelAndView editProduct(@PathVariable("prodId")Integer productId) {
@@ -49,6 +49,18 @@ public class ProductController {
 		return view;
 
 	}
+	
+	
+	@RequestMapping(value = "/editProduct/add/update")
+	public String updateProduct(Product product) {
+		System.out.println("####### Product Controller updateProductEdit");
+		productService.updateProduct(product);
+		return "redirect:/product";
+
+	}
+	
+	
+	
 
 //	 @RequestMapping("/deleteProduct") public ModelAndView deleteProduct(Product
 //	  product) { System.out.println("Product Controller deleteProduct");

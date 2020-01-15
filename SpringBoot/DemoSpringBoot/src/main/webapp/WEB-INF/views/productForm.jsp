@@ -43,7 +43,7 @@
 					</c:if>
 					
 					<c:if test="${empty product.productName}">
-						<input type="submit" value="<spring:message text = "Add Product">
+						<input type="submit" formaction="saveProduct" value="<spring:message text = "Add Product">
 						</spring:message>">
 					</c:if>
 				</td>
